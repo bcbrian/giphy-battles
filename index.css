@@ -1,0 +1,62 @@
+.game-container {
+  background-color: rebeccapurple;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.gif {
+  width: 20vh;
+  height: 20vh;
+  margin: 12px;
+  position: absolute;
+}
+
+.team-1 {
+  background-color: hotpink;
+  border-radius: 20px;
+}
+
+.team-2 {
+  background-color: aqua;
+  border-radius: 20px;
+}
+
+.team-1[class*=" pos-"] {
+  left: 0;
+}
+
+.team-2[class*=" pos-"] {
+  right: 0;
+}
+
+.pos-0 {
+  top: 0;
+}
+.pos-1 {
+  top: calc((20vh + 12px) * 1);
+}
+.pos-2 {
+  top: calc((20vh + 12px) * 2);
+}
+.pos-3 {
+  top: calc((20vh + 12px) * 3);
+}
+.pos-4 {
+  top: calc((20vh + 12px) * 4);
+}
+.pos-5 {
+  top: calc((20vh + 12px) * 5);
+}
+
+.game-container.round-0 .pos-0 {
+  top: 30vh;
+}
+
+.game-container.round-0 .team-1.pos-0 {
+  left: calc(50% - 20vh - 24px);
+}
+
+.game-container.round-0 .team-2.pos-0 {
+  right: calc(50% - 20vh - 24px);
+}

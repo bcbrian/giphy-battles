@@ -1,7 +1,7 @@
 {
-  "name": "static",
+  "name": "giphy-battles",
   "version": "1.0.0",
-  "description": "This is a static template with no bundling",
+  "description": "This app is a battle of gifs",
   "main": "index.html",
   "scripts": {
     "build": "echo \"no build required\""
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/codesandbox-app/static-template.git"
   },
-  "keywords": ["static", "template", "codesandbox"],
+  "keywords": [],
   "author": "Brian Bartholomew",
   "license": "MIT",
   "bugs": {
