@@ -1,0 +1,261 @@
+.game-container {
+  background-color: rebeccapurple;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.gif {
+  width: 20vh;
+  height: 20vh;
+  margin: 12px;
+  position: absolute;
+  transition: all 1s ease 0s;
+  overflow: hidden;
+}
+
+.gif img {
+  height: 100%;
+  min-width: 100%;
+  position: absolute;
+}
+
+.gif img.still {
+  opacity: 1;
+}
+
+.team-1 {
+  border: 2px solid hotpink;
+  border-radius: 20px;
+}
+
+.team-2 {
+  border: 2px solid aqua;
+  border-radius: 20px;
+}
+
+.team-1[class*=" pos-"] {
+  left: 0;
+}
+
+.team-2[class*=" pos-"] {
+  right: 0;
+}
+
+.pos-0 {
+  top: 0;
+}
+.pos-1 {
+  top: calc((20vh + 12px) * 1);
+}
+.pos-2 {
+  top: calc((20vh + 12px) * 2);
+}
+.pos-3 {
+  top: calc((20vh + 12px) * 3);
+}
+.pos-4 {
+  top: calc((20vh + 12px) * 4);
+}
+.pos-5 {
+  top: calc((20vh + 12px) * 5);
+}
+
+/* ROUND 0 */
+.game-container.round-0 .pos-0 {
+  top: 30vh;
+}
+
+.game-container.round-0 .pos-0 img.still {
+  opacity: 0;
+}
+
+.game-container.round-0 .team-1.pos-0 {
+  left: calc(50% - 20vh - 24px);
+}
+
+.game-container.round-0 .team-2.pos-0 {
+  right: calc(50% - 20vh - 24px);
+}
+
+.game-container.round-0 .team-1[class*=" pos-"],
+.game-container.round-0 .team-2[class*=" pos-"] {
+  transform: translateY(20vh);
+}
+
+.game-container.round-0 .team-1.pos-0,
+.game-container.round-0 .team-2.pos-0 {
+  transform: none; /* SCALE ?*/
+}
+
+/* ROUND 1 */
+.game-container.round-1 .pos-1 {
+  top: 30vh;
+}
+
+.game-container.round-1 .pos-1 img.still {
+  opacity: 0;
+}
+
+.game-container.round-1 .team-1.pos-1 {
+  left: calc(50% - 20vh - 24px);
+}
+
+.game-container.round-1 .team-2.pos-1 {
+  right: calc(50% - 20vh - 24px);
+}
+
+.game-container.round-1 .team-1[class*=" pos-"],
+.game-container.round-1 .team-2[class*=" pos-"] {
+  transform: translateY(0);
+}
+
+.game-container.round-1 .team-1.pos-1,
+.game-container.round-1 .team-2.pos-1 {
+  transform: none; /* SCALE ?*/
+}
+
+/* ROUND 2 */
+.game-container.round-2 .pos-2 {
+  top: 30vh;
+}
+
+.game-container.round-2 .pos-2 img.still {
+  opacity: 0;
+}
+
+.game-container.round-2 .team-1.pos-2 {
+  left: calc(50% - 20vh - 24px);
+}
+
+.game-container.round-2 .team-2.pos-2 {
+  right: calc(50% - 20vh - 24px);
+}
+
+.game-container.round-2 .team-1[class*=" pos-"],
+.game-container.round-2 .team-2[class*=" pos-"] {
+  transform: translateY(calc(-1 * 20vh));
+}
+
+.game-container.round-2 .team-1.pos-2,
+.game-container.round-2 .team-2.pos-2 {
+  transform: none; /* SCALE ?*/
+}
+
+/* ROUND 3 */
+.game-container.round-3 .pos-3 {
+  top: 30vh;
+}
+
+.game-container.round-3 .pos-3 img.still {
+  opacity: 0;
+}
+
+.game-container.round-3 .team-1.pos-3 {
+  left: calc(50% - 20vh - 24px);
+}
+
+.game-container.round-3 .team-2.pos-3 {
+  right: calc(50% - 20vh - 24px);
+}
+
+.game-container.round-3 .team-1[class*=" pos-"],
+.game-container.round-3 .team-2[class*=" pos-"] {
+  transform: translateY(calc(-2 * 20vh));
+}
+
+.game-container.round-3 .team-1.pos-3,
+.game-container.round-3 .team-2.pos-3 {
+  transform: none; /* SCALE ?*/
+}
+
+/* ROUND 4 */
+.game-container.round-4 .pos-4 {
+  top: 30vh;
+}
+
+.game-container.round-4 .pos-4 img.still {
+  opacity: 0;
+}
+
+.game-container.round-4 .team-1.pos-4 {
+  left: calc(50% - 20vh - 24px);
+}
+
+.game-container.round-4 .team-2.pos-4 {
+  right: calc(50% - 20vh - 24px);
+}
+
+.game-container.round-4 .team-1[class*=" pos-"],
+.game-container.round-4 .team-2[class*=" pos-"] {
+  transform: translateY(calc(-3 * 20vh));
+}
+
+.game-container.round-4 .team-1.pos-4,
+.game-container.round-4 .team-2.pos-4 {
+  transform: none; /* SCALE ?*/
+}
+
+/* ROUND 5 */
+.game-container.round-5 .pos-5 {
+  top: 30vh;
+}
+
+.game-container.round-5 .pos-5 img.still {
+  opacity: 0;
+}
+
+.game-container.round-5 .team-1.pos-5 {
+  left: calc(50% - 20vh - 24px);
+}
+
+.game-container.round-5 .team-2.pos-5 {
+  right: calc(50% - 20vh - 24px);
+}
+
+.game-container.round-5 .team-1[class*=" pos-"],
+.game-container.round-5 .team-2[class*=" pos-"] {
+  transform: translateY(calc(-4 * 20vh));
+}
+
+.game-container.round-5 .team-1.pos-5,
+.game-container.round-5 .team-2.pos-5 {
+  transform: none; /* SCALE ?*/
+}
+
+/* SCORE */
+.score-container {
+  width: 40vh;
+  height: 20vh;
+  position: absolute;
+  top: 60vh;
+  left: 50%;
+  background-color: rgba(0, 0, 0, 0.4);
+  transform: translateX(-50%);
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.score-title {
+  text-align: center;
+  flex: 0 0 40vh;
+}
+.team-1-score-container {
+}
+.team-1-score-title {
+}
+.team-1-score {
+  text-align: center;
+  font-size: 40px;
+}
+.team-2-score-container {
+}
+.team-2-score-title {
+}
+.team-2-score {
+  text-align: center;
+  font-size: 40px;
+}
