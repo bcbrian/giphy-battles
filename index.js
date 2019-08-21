@@ -94,18 +94,22 @@ function startBattle() {
         score.team2 = score.team2 + 1;
       }
     }
-    console.log("Score", score.team1, score.team2);
-    if (score.team1 === 0 || score.team2 === 0) {
-      console.log("BOOM SHUT OUT! KO! FINISH HIM!");
-    }
-    if (score.team1 > score.team2) {
-      return console.log("TEAM 1 is the Winner!");
-    } else if (score.team1 < score.team2) {
-      return console.log("TEAM 2 is the Winner!");
-    } else {
-      console.log("No Winner go again!");
-      return startBattle();
-    }
+    handleEndgame(score);
   });
 }
 startBattle();
+
+function handleEndgame(score) {
+  console.log("Score", score.team1, score.team2);
+  if (score.team1 === 0 || score.team2 === 0) {
+    console.log("BOOM SHUT OUT! KO! FINISH HIM!");
+  }
+  if (score.team1 > score.team2) {
+    return console.log("TEAM 1 is the Winner!");
+  } else if (score.team1 < score.team2) {
+    return console.log("TEAM 2 is the Winner!");
+  } else {
+    console.log("No Winner go again!");
+    return startBattle();
+  }
+}

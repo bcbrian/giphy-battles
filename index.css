@@ -3,6 +3,7 @@
   width: 100vw;
   height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 
 .gif {
@@ -10,6 +11,7 @@
   height: 20vh;
   margin: 12px;
   position: absolute;
+  transition: all 1s ease 0s;
 }
 
 .team-1 {
@@ -49,6 +51,7 @@
   top: calc((20vh + 12px) * 5);
 }
 
+/* ROUND 0 */
 .game-container.round-0 .pos-0 {
   top: 30vh;
 }
@@ -59,4 +62,129 @@
 
 .game-container.round-0 .team-2.pos-0 {
   right: calc(50% - 20vh - 24px);
+}
+
+.game-container.round-0 .team-1[class*=" pos-"],
+.game-container.round-0 .team-2[class*=" pos-"] {
+  transform: translateY(20vh);
+}
+
+.game-container.round-0 .team-1.pos-0,
+.game-container.round-0 .team-2.pos-0 {
+  transform: none; /* SCALE ?*/
+}
+
+/* ROUND 1 */
+.game-container.round-1 .pos-1 {
+  top: 30vh;
+}
+
+.game-container.round-1 .team-1.pos-1 {
+  left: calc(50% - 20vh - 24px);
+}
+
+.game-container.round-1 .team-2.pos-1 {
+  right: calc(50% - 20vh - 24px);
+}
+
+.game-container.round-1 .team-1[class*=" pos-"],
+.game-container.round-1 .team-2[class*=" pos-"] {
+  transform: translateY(0);
+}
+
+.game-container.round-1 .team-1.pos-1,
+.game-container.round-1 .team-2.pos-1 {
+  transform: none; /* SCALE ?*/
+}
+
+/* ROUND 2 */
+.game-container.round-2 .pos-2 {
+  top: 30vh;
+}
+
+.game-container.round-2 .team-1.pos-2 {
+  left: calc(50% - 20vh - 24px);
+}
+
+.game-container.round-2 .team-2.pos-2 {
+  right: calc(50% - 20vh - 24px);
+}
+
+.game-container.round-2 .team-1[class*=" pos-"],
+.game-container.round-2 .team-2[class*=" pos-"] {
+  transform: translateY(calc(-1 * 20vh));
+}
+
+.game-container.round-2 .team-1.pos-2,
+.game-container.round-2 .team-2.pos-2 {
+  transform: none; /* SCALE ?*/
+}
+
+/* ROUND 3 */
+.game-container.round-3 .pos-3 {
+  top: 30vh;
+}
+
+.game-container.round-3 .team-1.pos-3 {
+  left: calc(50% - 20vh - 24px);
+}
+
+.game-container.round-3 .team-2.pos-3 {
+  right: calc(50% - 20vh - 24px);
+}
+
+.game-container.round-3 .team-1[class*=" pos-"],
+.game-container.round-3 .team-2[class*=" pos-"] {
+  transform: translateY(calc(-2 * 20vh));
+}
+
+.game-container.round-3 .team-1.pos-3,
+.game-container.round-3 .team-2.pos-3 {
+  transform: none; /* SCALE ?*/
+}
+
+/* ROUND 4 */
+.game-container.round-4 .pos-4 {
+  top: 30vh;
+}
+
+.game-container.round-4 .team-1.pos-4 {
+  left: calc(50% - 20vh - 24px);
+}
+
+.game-container.round-4 .team-2.pos-4 {
+  right: calc(50% - 20vh - 24px);
+}
+
+.game-container.round-4 .team-1[class*=" pos-"],
+.game-container.round-4 .team-2[class*=" pos-"] {
+  transform: translateY(calc(-3 * 20vh));
+}
+
+.game-container.round-4 .team-1.pos-4,
+.game-container.round-4 .team-2.pos-4 {
+  transform: none; /* SCALE ?*/
+}
+
+/* ROUND 5 */
+.game-container.round-5 .pos-5 {
+  top: 30vh;
+}
+
+.game-container.round-5 .team-1.pos-5 {
+  left: calc(50% - 20vh - 24px);
+}
+
+.game-container.round-5 .team-2.pos-5 {
+  right: calc(50% - 20vh - 24px);
+}
+
+.game-container.round-5 .team-1[class*=" pos-"],
+.game-container.round-5 .team-2[class*=" pos-"] {
+  transform: translateY(calc(-4 * 20vh));
+}
+
+.game-container.round-5 .team-1.pos-5,
+.game-container.round-5 .team-2.pos-5 {
+  transform: none; /* SCALE ?*/
 }
