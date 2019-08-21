@@ -100,6 +100,7 @@ function startBattle() {
             score.team2 = score.team2 + 1;
           }
           i++;
+          updateScores(score);
           battles();
         }, 1000);
       } else {
@@ -132,4 +133,9 @@ function handleRoundAnimation(newRound, oldRound) {
     .querySelector(".game-container")
     .classList.remove("round-" + oldRound);
   document.querySelector(".game-container").classList.add("round-" + newRound);
+}
+
+function updateScores(scores) {
+  document.querySelector(".team-1-score").innerHTML = scores.team1;
+  document.querySelector(".team-2-score").innerHTML = scores.team2;
 }
