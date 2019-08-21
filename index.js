@@ -4,7 +4,10 @@ const API_KEY = "bUcx7xDKXvZQDgY629OF9v1fNqDFNImK";
 
 function fetchRandomGif(category, cb) {
   return fetch(
-    "https://api.giphy.com/v1/gifs/random?q=" + category + "&api_key=" + API_KEY
+    "https://api.giphy.com/v1/gifs/random?rating=g&tag=" +
+      category +
+      "&api_key=" +
+      API_KEY
   ).then(function(response) {
     return response.json();
   });
@@ -80,6 +83,9 @@ function startBattle() {
     console.log("teams", values);
     const team1 = values[0];
     const team2 = values[1];
+
+    renderGifs("team-1", team1);
+    renderGifs("team-2", team2);
     //score
     const score = {
       team1: 0,
@@ -102,7 +108,7 @@ function startBattle() {
           i++;
           updateScores(score);
           battles();
-        }, 1000);
+        }, 3000);
       } else {
         handleRoundAnimation(0, 5);
         handleEndgame(score);
@@ -138,4 +144,20 @@ function handleRoundAnimation(newRound, oldRound) {
 function updateScores(scores) {
   document.querySelector(".team-1-score").innerHTML = scores.team1;
   document.querySelector(".team-2-score").innerHTML = scores.team2;
+}
+
+function renderGifs(teamName, team) {
+  for (let i = 0; i < team.length; i++) {
+    const gif = team[i];
+    const gifContainer = document.querySelector(
+      ".gif." + teamName + ".pos-" + i
+    );
+    gifContainer.innerHTML =
+      "<img class='animated' src='" +
+      gif.images.fixed_width.url +
+      "'/>" +
+      "<img class='still' src='" +
+      gif.images.fixed_width_still.url +
+      "'/>";
+  }
 }

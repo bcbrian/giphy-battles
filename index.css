@@ -12,15 +12,26 @@
   margin: 12px;
   position: absolute;
   transition: all 1s ease 0s;
+  overflow: hidden;
+}
+
+.gif img {
+  height: 100%;
+  min-width: 100%;
+  position: absolute;
+}
+
+.gif img.still {
+  opacity: 1;
 }
 
 .team-1 {
-  background-color: hotpink;
+  border: 2px solid hotpink;
   border-radius: 20px;
 }
 
 .team-2 {
-  background-color: aqua;
+  border: 2px solid aqua;
   border-radius: 20px;
 }
 
@@ -56,6 +67,10 @@
   top: 30vh;
 }
 
+.game-container.round-0 .pos-0 img.still {
+  opacity: 0;
+}
+
 .game-container.round-0 .team-1.pos-0 {
   left: calc(50% - 20vh - 24px);
 }
@@ -77,6 +92,10 @@
 /* ROUND 1 */
 .game-container.round-1 .pos-1 {
   top: 30vh;
+}
+
+.game-container.round-1 .pos-1 img.still {
+  opacity: 0;
 }
 
 .game-container.round-1 .team-1.pos-1 {
@@ -102,6 +121,10 @@
   top: 30vh;
 }
 
+.game-container.round-2 .pos-2 img.still {
+  opacity: 0;
+}
+
 .game-container.round-2 .team-1.pos-2 {
   left: calc(50% - 20vh - 24px);
 }
@@ -123,6 +146,10 @@
 /* ROUND 3 */
 .game-container.round-3 .pos-3 {
   top: 30vh;
+}
+
+.game-container.round-3 .pos-3 img.still {
+  opacity: 0;
 }
 
 .game-container.round-3 .team-1.pos-3 {
@@ -148,6 +175,10 @@
   top: 30vh;
 }
 
+.game-container.round-4 .pos-4 img.still {
+  opacity: 0;
+}
+
 .game-container.round-4 .team-1.pos-4 {
   left: calc(50% - 20vh - 24px);
 }
@@ -169,6 +200,10 @@
 /* ROUND 5 */
 .game-container.round-5 .pos-5 {
   top: 30vh;
+}
+
+.game-container.round-5 .pos-5 img.still {
+  opacity: 0;
 }
 
 .game-container.round-5 .team-1.pos-5 {
