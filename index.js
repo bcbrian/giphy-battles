@@ -85,16 +85,29 @@ function startBattle() {
       team1: 0,
       team2: 0
     };
-    for (let i = 0; i < teamSize; i++) {
-      const result = giphyBattle(team1[i], team2[i]);
-      if (result === "team1") {
-        score.team1 = score.team1 + 1;
-      }
-      if (result === "team2") {
-        score.team2 = score.team2 + 1;
+    let i = 0;
+    function battles() {
+      if (i < teamSize) {
+        handleRoundAnimation(i, i - 1);
+        setTimeout(function() {
+          const result = giphyBattle(team1[i], team2[i]);
+          if (result === "team1") {
+            console.log("team1 won");
+            score.team1 = score.team1 + 1;
+          }
+          if (result === "team2") {
+            console.log("team2 won");
+            score.team2 = score.team2 + 1;
+          }
+          i++;
+          battles();
+        }, 1000);
+      } else {
+        handleRoundAnimation(0, 5);
+        handleEndgame(score);
       }
     }
-    handleEndgame(score);
+    battles();
   });
 }
 startBattle();
@@ -112,4 +125,11 @@ function handleEndgame(score) {
     console.log("No Winner go again!");
     return startBattle();
   }
+}
+
+function handleRoundAnimation(newRound, oldRound) {
+  document
+    .querySelector(".game-container")
+    .classList.remove("round-" + oldRound);
+  document.querySelector(".game-container").classList.add("round-" + newRound);
 }

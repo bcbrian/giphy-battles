@@ -188,3 +188,39 @@
 .game-container.round-5 .team-2.pos-5 {
   transform: none; /* SCALE ?*/
 }
+
+/* SCORE */
+.score-container {
+  width: 40vh;
+  height: 20vh;
+  position: absolute;
+  top: 60vh;
+  left: 50%;
+  background-color: rgba(0, 0, 0, 0.4);
+  transform: translateX(-50%);
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.score-title {
+  text-align: center;
+  flex: 0 0 40vh;
+}
+.team-1-score-container {
+}
+.team-1-score-title {
+}
+.team-1-score {
+  text-align: center;
+  font-size: 40px;
+}
+.team-2-score-container {
+}
+.team-2-score-title {
+}
+.team-2-score {
+  text-align: center;
+  font-size: 40px;
+}
