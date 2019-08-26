@@ -9,9 +9,49 @@
 </head>
 <body>
   <div class="start-container">
-    <div class="left-panel"></div>
-    <div class="right-panel"></div>
-    <button class="start-btn">START</button>
+    <div class="left-panel "></div>
+    <div class="right-panel "></div>
+    <button class="start-btn">GO FIGHT WIN</button>
+    <div class="btn-container hidden">
+      <button class="battle-btn">Presidents</button>
+      <button class="battle-btn">Pokemon</button>
+      <button class="battle-btn">dramatic chipmunk</button>
+    </div>
   </div>
+
+  <div class="game-container round-0 hidden">
+    <div class="gif team-1 pos-0"></div>
+    <div class="gif team-1 pos-1"></div>
+    <div class="gif team-1 pos-2"></div>
+    <div class="gif team-1 pos-3"></div>
+    <div class="gif team-1 pos-4"></div>
+    <div class="gif team-1 pos-5"></div>
+
+    <div class="gif team-2 pos-0"></div>
+    <div class="gif team-2 pos-1"></div>
+    <div class="gif team-2 pos-2"></div>
+    <div class="gif team-2 pos-3"></div>
+    <div class="gif team-2 pos-4"></div>
+    <div class="gif team-2 pos-5"></div>
+
+    <div class="score-container">
+      <div class="score-title">score</div>
+      <div class="team-1-score-container">
+        <div class="team-1-score-title">team 1</div>
+        <div class="team-1-score">0</div>
+      </div>
+      <div class="team-2-score-container">
+        <div class="team-2-score-title">team 2</div>
+        <div class="team-2-score">0</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="message-container hidden">
+    <div class="message"></div>
+    <button class="reset-btn">again?</button>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
