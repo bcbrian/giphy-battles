@@ -345,6 +345,65 @@
   transform: none; /* SCALE ?*/
 }
 
+/* ROUND WINNER */
+.game-container.round-winner-1 .score-container,
+.game-container.round-winner-2 .score-container {
+  top: 30vh;
+}
+
+.game-container.round-winner-1 .gif.team-1 img.still,
+.game-container.round-winner-2 .gif.team-2 img.still {
+  opacity: 0;
+}
+
+.game-container.round-winner-1 .gif.team-2,
+.game-container.round-winner-2 .gif.team-1 {
+  opacity: 0;
+  left: -100%;
+}
+
+.game-container.round-winner-1 .gif.pos-0,
+.game-container.round-winner-1 .gif.pos-1,
+.game-container.round-winner-1 .gif.pos-2,
+.game-container.round-winner-2 .gif.pos-0,
+.game-container.round-winner-2 .gif.pos-1,
+.game-container.round-winner-2 .gif.pos-2 {
+  top: 50vh;
+}
+
+.game-container.round-winner-1 .gif.pos-3,
+.game-container.round-winner-1 .gif.pos-4,
+.game-container.round-winner-1 .gif.pos-5,
+.game-container.round-winner-2 .gif.pos-3,
+.game-container.round-winner-2 .gif.pos-4,
+.game-container.round-winner-2 .gif.pos-5 {
+  top: 75vh;
+}
+
+.game-container.round-winner-1 .gif.pos-0,
+.game-container.round-winner-1 .gif.pos-3,
+.game-container.round-winner-2 .gif.pos-0,
+.game-container.round-winner-2 .gif.pos-3 {
+  left: 50%;
+  transform: translateX(-175%);
+}
+
+.game-container.round-winner-1 .gif.pos-1,
+.game-container.round-winner-1 .gif.pos-4,
+.game-container.round-winner-2 .gif.pos-1,
+.game-container.round-winner-2 .gif.pos-4 {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.game-container.round-winner-1 .gif.pos-2,
+.game-container.round-winner-1 .gif.pos-5,
+.game-container.round-winner-2 .gif.pos-2,
+.game-container.round-winner-2 .gif.pos-5 {
+  left: 50%;
+  transform: translateX(75%);
+}
+
 /* SCORE */
 .score-container {
   width: 40vh;
@@ -386,7 +445,7 @@
   width: 40vh;
   height: 20vh;
   position: absolute;
-  top: 10vh;
+  top: 5vh;
   left: 50%;
   background-color: rgba(0, 0, 0, 0.4);
   transform: translateX(-50%);

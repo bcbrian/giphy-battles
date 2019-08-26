@@ -72,6 +72,7 @@ document.querySelector(".start-btn").addEventListener("click", function() {
 
 document.querySelectorAll(".battle-btn").forEach(function(battleBtnEl) {
   battleBtnEl.addEventListener("click", function(event) {
+    handleRoundAnimationReset();
     if (event.target.innerHTML.toLowerCase() === "presidents") {
       document.querySelector(".start-container").classList.toggle("hidden");
       document.querySelector(".game-container").classList.toggle("hidden");
@@ -212,7 +213,6 @@ function startBattle(team1Name, team2Name) {
           battles();
         }, 500);
       } else {
-        handleRoundAnimation(0, 5);
         handleEndgame(score);
       }
     }
@@ -232,10 +232,13 @@ function handleEndgame(score) {
   }
   if (_.gt(score1, score2)) {
     message += name1 + " is the Winner!";
+    handleRoundAnimation("winner-1", 5);
   } else if (_.lt(score1, score2)) {
     message += name2 + " is the Winner!";
+    handleRoundAnimation("winner-2", 5);
   } else {
-    message += "No Winner!";
+    handleRoundAnimationReset();
+    return startBattle(name1, name2);
   }
   document.querySelector(".message-container").classList.toggle("hidden");
   document.querySelector(".message").innerHTML = message;
@@ -246,6 +249,17 @@ function handleRoundAnimation(newRound, oldRound) {
     .querySelector(".game-container")
     .classList.remove("round-" + oldRound);
   document.querySelector(".game-container").classList.add("round-" + newRound);
+}
+function handleRoundAnimationReset() {
+  document.querySelector(".game-container").classList.remove("round-0");
+  document.querySelector(".game-container").classList.remove("round-1");
+  document.querySelector(".game-container").classList.remove("round-2");
+  document.querySelector(".game-container").classList.remove("round-3");
+  document.querySelector(".game-container").classList.remove("round-4");
+  document.querySelector(".game-container").classList.remove("round-5");
+  document.querySelector(".game-container").classList.remove("round-winner-1");
+  document.querySelector(".game-container").classList.remove("round-winner-2");
+  document.querySelector(".game-container").classList.add("round-0");
 }
 
 function updateScores(scores) {
@@ -270,10 +284,17 @@ function renderGifs(teamName, team) {
   });
 }
 
+function changeGifsToLoadingGif() {
+  document.querySelectorAll(".gif").forEach(function(gifEl) {
+    gifEl.innerHTML = '<img src="assets/img/orca-loading.gif" />';
+  });
+}
+
 //Battle reset
 document.querySelector(".reset-btn").addEventListener("click", function(event) {
   document.querySelector(".message").innerHTML = "";
   document.querySelector(".message-container").classList.toggle("hidden");
   document.querySelector(".start-container").classList.toggle("hidden");
   document.querySelector(".game-container").classList.toggle("hidden");
+  setTimeout(changeGifsToLoadingGif, 500);
 });
